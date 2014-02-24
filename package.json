@@ -1,0 +1,31 @@
+{
+  "name": "mezzanine",
+  "version": "0.0.1",
+  "description": "A little website about moi",
+  "main": "app.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sanjaypojo/mezzanine.git"
+  },
+  "keywords": [
+    "nodejs",
+    "responsive",
+    "mobile-first",
+    "minimal"
+  ],
+  "author": "sanjaypojo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanjaypojo/mezzanine/issues"
+  },
+  "homepage": "https://github.com/sanjaypojo/mezzanine",
+  "devDependencies": {
+    "gulp": "~3.5.2"
+  },
+  "dependencies": {
+    "connect": "~2.13.0"
+  }
+}
