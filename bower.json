@@ -1,0 +1,14 @@
+{
+  "name": "mezzanine",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sanjaypojo/mezzanine",
+  "authors": [
+    "sanjaypojo"
+  ],
+  "main": "app.coffee",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "normalize-less": "*"
+  }
+}
