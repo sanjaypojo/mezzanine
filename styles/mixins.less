@@ -1,0 +1,173 @@
+// GRID SYSTEM
+@grid-padding: 15px;
+@grid-columns: 12;
+@grid-margin: 2%;
+@grid-correction: 0%;
+
+@grid-xs: 480px;
+@grid-sm: 768px;
+@grid-md: 992px;
+@grid-lg: 1200px;
+
+.row() {
+  .clearfix;
+  margin-left: -1 * @grid-padding;
+  margin-right: -1 * @grid-padding;
+}
+
+.col(@columns, @mq: xs) {
+  @grid-mq: "grid-@{mq}";
+  margin-left: @grid-margin;
+  margin-right: @grid-margin;
+  padding-left: @grid-padding;
+  padding-right: @grid-padding;
+  min-height: 1px;
+  float: left;
+  @media screen and (min-width: @@grid-mq) {
+    width: percentage(@columns/@grid-columns) - (2*@grid-margin) - @grid-correction;
+  }
+}
+
+.offset(@columns, @mq: xs) {
+  @grid-mq: "grid-@{mq}";
+  @media screen and (min-width: @@grid-mq) {
+    margin-left: percentage(@columns/@grid-columns) + @grid-margin - @grid-correction;
+  }
+}
+
+// RESPONSIVE STYLING
+
+.when(@mq, @property, @value) {
+  @grid-mq: "grid-@{mq}";
+  @media screen and (min-width: @@grid-mq) {
+    @{property} : @value;
+  }
+}
+
+// UTILITIES
+
+// Vertical space
+.breathe(@margin-v, @padding-v:inherit) {
+  margin-top: @margin-v;
+  margin-bottom: @margin-v;
+  padding-top: @padding-v;
+  padding-bottom: @padding-v;
+}
+
+// Rounded border
+.bordered(@color: #eee, @thickness: 1px) {
+  border: solid @thickness @color;
+}
+
+.rounded(@color: #eee, @radius: 5px, @thickness: 1px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  border: solid @thickness @color;
+}
+
+// Box sizing
+.box-sizing(@box-model) {
+  -webkit-box-sizing: @box-model; // Safari <= 5
+     -moz-box-sizing: @box-model; // Firefox <= 19
+          box-sizing: @box-model;
+}
+
+// Transitions
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+.transition-delay(@transition-delay) {
+  -webkit-transition-delay: @transition-delay;
+     -moz-transition-delay: @transition-delay;
+       -o-transition-delay: @transition-delay;
+          transition-delay: @transition-delay;
+}
+.transition-duration(@transition-duration) {
+  -webkit-transition-duration: @transition-duration;
+     -moz-transition-duration: @transition-duration;
+       -o-transition-duration: @transition-duration;
+          transition-duration: @transition-duration;
+}
+
+// For selecting text on the page
+.user-select(@select) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select;
+       -o-user-select: @select;
+          user-select: @select;
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity;
+  @opacity-ie: @opacity * 100;
+  filter: ~"alpha(opacity=@{opacity-ie})"; // IE8
+}
+
+// Placeholder text
+.placeholder(@color: #666) {
+  &:-moz-placeholder            { color: @color; } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; } // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+  *zoom:1;
+  &:before,
+  &:after {
+      content:"";
+      display:table;
+  }
+  &:after {
+      clear:both;
+  }
+}
+
+// Center-align a block level element
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Sizing shortcuts
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+.square(@size) {
+  .size(@size, @size);
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+.text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Retina images
+// Retina background-image support with non-retina fall back
+.retina-image(@file-1x, @file-2x, @width-1x, @height-1x) {
+  background-image: url("@{file-1x}");
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url("@{file-2x}");
+    background-size: @width-1x @height-1x;
+  }
+}

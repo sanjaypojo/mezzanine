@@ -1,0 +1,87 @@
+// FONTS
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+// COLOURS
+// Brand
+@brand-black: #333;
+@brand-white: #efe;
+@brand-green: #339966;
+@brand-blue: #336699;
+@brand-yellow: #dddd33;
+@brand-gray: #eee;
+
+// Markup
+@link-clr: @brand-green;
+@hover-clr: lighten(@link-clr, 10%);
+
+@header-bg-clr: @brand-black;
+@header-clr: white;
+@caption-clr: @brand-white;
+@nav-bg-clr: @brand-green;
+@nav-clr: @brand-gray;
+@footer-bg-clr: @brand-black;
+@footer-clr: @brand-white;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: @brand-black;
+
+  header {
+    h1 {color: @header-clr;}
+    color: @caption-clr;
+    background-color: @header-bg-clr;
+    .breathe(0,1.2rem);
+  }
+
+  nav {
+    margin-bottom: 2rem;
+    background-color: @nav-bg-clr;
+    padding: 0;
+    ul {
+      list-style-type: none;
+      margin:0;
+      padding: 0;
+      text-align: center;
+      .clearfix;
+      li {
+        .col(2);
+        &#nav-1 {
+          .offset(3);
+        }
+        a {
+          color: @nav-clr;
+          &:hover{
+            color: lighten(@nav-clr,10%);
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .col(12);
+    .when(md, min-height, 30rem);
+  }
+
+  main.error {
+    .breathe(2rem, 2rem);
+    text-align: center;
+  }
+
+  footer {
+    clear: both;
+    background-color: @footer-bg-clr;
+    color: @footer-clr;
+    text-align: center;
+    .clearfix;
+    min-height: 5rem;
+    a {
+      color: @brand-yellow;
+      &:hover {
+        color: @brand-yellow + #222200;
+      }
+    }
+  }
+}

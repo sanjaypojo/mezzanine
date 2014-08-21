@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 article,
 aside,
 details,
@@ -167,4 +168,221 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-weight: 300;
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+h2 {
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: inherit;
+  padding-bottom: inherit;
+}
+h4 {
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: inherit;
+  padding-bottom: inherit;
+}
+a {
+  color: #339966;
+  text-decoration: none;
+}
+a:hover {
+  color: #40bf80;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #333333;
+}
+body header {
+  color: #eeffee;
+  background-color: #333333;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+body header h1 {
+  color: #ffffff;
+}
+body nav {
+  margin-bottom: 2rem;
+  background-color: #339966;
+  padding: 0;
+}
+body nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  *zoom: 1;
+}
+body nav ul:before,
+body nav ul:after {
+  content: "";
+  display: table;
+}
+body nav ul:after {
+  clear: both;
+}
+body nav ul li {
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 1px;
+  float: left;
+}
+@media screen and (min-width: 480px) {
+  body nav ul li {
+    width: 12.66666667%;
+  }
+}
+@media screen and (min-width: 480px) {
+  body nav ul li#nav-1 {
+    margin-left: 27%;
+  }
+}
+body nav ul li a {
+  color: #eeeeee;
+}
+body nav ul li a:hover {
+  color: #ffffff;
+}
+body main {
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 1px;
+  float: left;
+}
+@media screen and (min-width: 480px) {
+  body main {
+    width: 96%;
+  }
+}
+@media screen and (min-width: 992px) {
+  body main {
+    min-height: 30rem;
+  }
+}
+body main.error {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+body footer {
+  clear: both;
+  background-color: #333333;
+  color: #eeffee;
+  text-align: center;
+  *zoom: 1;
+  min-height: 5rem;
+}
+body footer:before,
+body footer:after {
+  content: "";
+  display: table;
+}
+body footer:after {
+  clear: both;
+}
+body footer a {
+  color: #dddd33;
+}
+body footer a:hover {
+  color: #ffff33;
+}
+main.resume section.timeline {
+  *zoom: 1;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+main.resume section.timeline:before,
+main.resume section.timeline:after {
+  content: "";
+  display: table;
+}
+main.resume section.timeline:after {
+  clear: both;
+}
+main.resume section.timeline .timeline-headers {
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 1px;
+  float: left;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: inherit;
+  padding-bottom: inherit;
+}
+@media screen and (min-width: 480px) {
+  main.resume section.timeline .timeline-headers {
+    width: 96%;
+  }
+}
+main.resume section.timeline .timeline-headers .timeline-header {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 1px;
+  float: left;
+  background-color: #333333;
+  color: #eeffee;
+  text-align: center;
+}
+@media screen and (min-width: 480px) {
+  main.resume section.timeline .timeline-headers .timeline-header {
+    width: 21%;
+  }
+}
+main.resume section.timeline .timeline-headers .timeline-header.active {
+  background-color: #336699;
+}
+main.resume section.timeline .timeline-headers .timeline-header .organisation {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+main.resume section.timeline .timeline-headers .timeline-header .city,
+main.resume section.timeline .timeline-headers .timeline-header .year {
+  font-size: 0.8rem;
 }

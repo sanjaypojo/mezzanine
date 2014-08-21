@@ -5,7 +5,7 @@ jade = require 'jade'
 # Relies on correctly defining the path
 
 module.exports = (res, fileName, data) ->
-  filepath = __dirname + '/../content/' + fileName + '.jade'
+  filepath = __dirname + '/../markup/' + fileName + '.jade'
   jade.renderFile filepath, data, (err, html) ->
     if err
       console.error 'Jade rendering failed.', err
