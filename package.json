@@ -1,0 +1,30 @@
+{
+  "name": "mezzanine",
+  "version": "0.1.0",
+  "description": "A website about moi",
+  "main": "app.coffee",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register --reporter list",
+    "start": "nodemon src/app.coffee -e coffee,jade,js,less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanjaypojo/mezzanine.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "sanjaypojo",
+    "Sanjay",
+    "Guruprasad"
+  ],
+  "author": "sanjaypojo",
+  "license": "Borrow, don't steal. Ask @sanjaypojo basically.",
+  "bugs": {
+    "url": "https://github.com/sanjaypojo/mezzanine/issues"
+  },
+  "homepage": "https://github.com/sanjaypojo/mezzanine",
+  "dependencies": {
+    "connect": "^2.25.7",
+    "rendered": "git://github.com/sanjaypojo/rendered.git"
+  }
+}
