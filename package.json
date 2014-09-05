@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/sanjaypojo/mezzanine",
   "dependencies": {
+    "coffee-script": "^1.8.0",
     "connect": "^2.25.7",
+    "parse-request": "git://github.com/sanjaypojo/parse-request.git",
     "rendered": "git://github.com/sanjaypojo/rendered.git"
   }
 }
