@@ -27,6 +27,7 @@
     "coffee-script": "^1.8.0",
     "connect": "^2.25.7",
     "parse-request": "git://github.com/sanjaypojo/parse-request.git",
+    "quip": "^0.1.2",
     "rendered": "git://github.com/sanjaypojo/rendered.git"
   }
 }
