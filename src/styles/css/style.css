@@ -1,1 +1,5 @@
 @import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css';
+#visualize-life {
+  border-left: 1px solid #333;
+  margin: 2rem;
+}
