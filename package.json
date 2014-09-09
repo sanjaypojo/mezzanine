@@ -29,5 +29,8 @@
     "parse-request": "git://github.com/sanjaypojo/parse-request.git",
     "quip": "^0.1.2",
     "rendered": "git://github.com/sanjaypojo/rendered.git"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.2.0"
   }
 }

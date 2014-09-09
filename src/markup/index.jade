@@ -4,18 +4,28 @@ html
     title Hello
     link(href="style.css", rel="stylesheet", type="text/css")
   body
-    h1 Sanjay Guruprasad
-    h2 Projects
-    a(href="http://thoughtarium.com")
-      h3 Thoughtarium
-      p A document based blogging engine using NodeJS
-    a(href="http://nocturnedevs.com")
-      h3 Nocturne
-      p Open source projects with my best friend, Hari Mohanraj
-    h2 Life
-    svg#visualize-life
-    h2 Travels
-    p God knows why I have this section
+    header.title
+      h1 Sanjay Guruprasad
+    section.section#projects
+      h2.section-title Projects
+      .project
+        a(href="http://thoughtarium.com")
+          .project-info
+            h3 Thoughtarium
+            p A document based blogging engine using NodeJS
+          img(src='img/thoughtarium.png')
+      .project
+        a(href="http://nocturnedevs.com")
+          .project-info
+            h3 Nocturne
+            p Open source projects with my best friend, Hari Mohanraj
+          img(src='img/nocturne.png')
+    section.section#life
+      h2.section-title Life
+      svg#visualize-life
+    section.section#travels
+      h2 Travels
+      p God knows why I have this section
   script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
   script
     :coffee
@@ -24,7 +34,7 @@ html
       console.log graphColors
       workEx = [4, 14, 4, 1.25, 0.25, 1].map((v,i) -> {value:v, x: 50*i, y: 100})
       console.log workEx
-      lifeSvg.style("background-color", "#efefef").style("height", "800px").style("width", "100%")
+      lifeSvg.style("height", "400px").style("width", "100%")
       bubbles = lifeSvg.selectAll("circle").data(workEx)
         .enter().append("circle")
         .attr("cy", (d) -> return d.y)
@@ -38,7 +48,7 @@ html
           counter = 1
           for node in workEx
             node.x = (1000*Math.random())%1000
-            node.y = (1000*Math.random())%800
+            node.y = (1000*Math.random())%400
           bubbles.transition().duration(3000).attr("cx", (d) -> return d.x)
             .attr("cy", (d) -> return d.y)
         return false

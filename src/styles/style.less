@@ -1,6 +1,49 @@
-@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css';
+@import 'node_modules/bootstrap/less/bootstrap';
 
-#visualize-life {
-  border-left: 1px solid #333;
-  margin: 2rem;
+@v-rhythm: 1rem;
+
+body {
+  background-color: #fdfdfd;
+}
+
+.v-space(@margin, @padding) {
+  margin-bottom: @v-rhythm * @margin;
+  padding-bottom: @v-rhythm * @padding;
+}
+
+.title {
+  .jumbotron;
+  background-color: #333;
+  color: #dddd33;
+  .text-center;
+}
+
+img {
+  .img-responsive;
+}
+
+.section-title {
+  .make-xs-column(12);
+  .text-center;
+  .v-space(4, 1);
+}
+
+.section {
+  .container;
+  .v-space(4, 4);
+  background-color: #fdfdfd;
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.project {
+  .make-sm-column(6);
+  .project-info {
+    .make-sm-column(6);
+  }
+  img {
+    .make-sm-column(6);
+    .img-thumbnail;
+  }
 }
