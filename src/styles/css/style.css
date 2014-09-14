@@ -6223,9 +6223,8 @@ img {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  text-align: center;
-  margin-bottom: 4rem;
-  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 .section {
   margin-right: auto;
@@ -6263,14 +6262,13 @@ img {
     margin-left: 0;
   }
 }
-.section:hover {
-  background-color: #fff;
-}
 .project {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .project {
