@@ -26,9 +26,9 @@
   "dependencies": {
     "coffee-script": "^1.8.0",
     "connect": "^2.25.7",
-    "parse-request": "git://github.com/sanjaypojo/parse-request.git",
     "quip": "^0.1.2",
-    "rendered": "git://github.com/sanjaypojo/rendered.git"
+    "s-parse-request": "git+ssh://git@git.softrade.in:sanjaypojo/s-parse-request.git",
+    "s-rendered": "git+ssh://git@git.softrade.in:sanjaypojo/s-rendered.git"
   },
   "devDependencies": {
     "bootstrap": "^3.2.0"

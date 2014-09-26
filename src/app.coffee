@@ -1,11 +1,12 @@
 connect = require 'connect'
 quip = require 'quip'
-render = require 'rendered'
-pr = require 'parse-request'
+render = require 's-rendered'
+pr = require 's-parse-request'
 
 app = connect()
 
-render.less(app, __dirname + '/styles/')
+render.public app, __dirname + '/public/'
+render.less __dirname + '/styles/'
 
 app
   .use connect.logger('small')
