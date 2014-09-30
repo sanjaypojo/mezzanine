@@ -7,6 +7,7 @@ app = connect()
 
 render.public app, __dirname + '/public/'
 render.less __dirname + '/styles/'
+render.coffee __dirname + '/scripts/'
 
 app
   .use connect.logger('small')
