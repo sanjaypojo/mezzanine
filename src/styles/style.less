@@ -26,9 +26,11 @@
 
 
 @v-rhythm: 1rem;
+@brand-black: #333;
+@brand-yellow: #eeee22;
 
 body {
-  background-color: #fdfdfd;
+  // background-color: #fdfdfd;
 }
 
 .v-space(@margin, @padding) {
@@ -38,8 +40,8 @@ body {
 
 .title {
   .jumbotron;
-  background-color: #333;
-  color: #eeee22;
+  background-color: @brand-black;
+  color: @brand-yellow;
   text-align: center;
   h1 {
     font-size: 4rem;
@@ -50,15 +52,21 @@ img {
   .img-responsive;
 }
 
+.section {
+  .container;
+  .clearfix;
+  .v-space(2, 2);
+  background-color: #fdfdfd;
+}
+
 .section-title {
   .make-xs-column(12);
   .v-space(2, 2);
 }
 
-.section {
-  .container;
-  .v-space(4, 4);
-  background-color: #fdfdfd;
+.section-intro {
+  .make-xs-column(12);
+  .v-space(2,2);
 }
 
 .project {
@@ -71,4 +79,13 @@ img {
     .make-sm-column(6);
     .img-thumbnail;
   }
+}
+
+footer {
+  clear: both;
+  margin: 0;
+  padding: 1rem;
+  background-color: @brand-black;
+  color: @brand-yellow;
+  text-align: right;
 }
