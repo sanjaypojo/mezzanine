@@ -1,0 +1,6 @@
+#!/bin/sh
+GIT_WORK_TREE=/home/sanjaypojo/mezzanine/production git checkout -f
+cd /home/sanjaypojo/mezzanine/production
+npm install
+forever restartall
+echo "mezzanine deployed successfully"
