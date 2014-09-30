@@ -32,35 +32,3 @@ html
           .project-info
             h3 Softrade
             p Customized software projects at my parent's company
-    section.section#life
-      h2.section-title Life
-      svg#visualize-life
-    section.section#travels
-      h2 Travels
-      p God knows why I have this section
-  script(src="http://d3js.org/d3.v3.min.js", charset="utf-8")
-  script
-    :coffee
-      lifeSvg = d3.select("#visualize-life")
-      graphColors = d3.scale.category10().range()
-      console.log graphColors
-      workEx = [4, 14, 4, 1.25, 0.25, 1].map((v,i) -> {value:v, x: 50*i, y: 100})
-      console.log workEx
-      lifeSvg.style("height", "400px").style("width", "100%")
-      bubbles = lifeSvg.selectAll("circle").data(workEx)
-        .enter().append("circle")
-        .attr("cy", (d) -> return d.y)
-        .attr("cx", (d) -> return d.x)
-        .attr("r", (d) -> return 20*d.value)
-        .style("fill", (d, i) -> return graphColors[i+1])
-      counter = 0
-      d3.timer (e) ->
-        counter+=1
-        if counter == 100
-          counter = 1
-          for node in workEx
-            node.x = (1000*Math.random())%1000
-            node.y = (1000*Math.random())%400
-          bubbles.transition().duration(3000).attr("cx", (d) -> return d.x)
-            .attr("cy", (d) -> return d.y)
-        return false
