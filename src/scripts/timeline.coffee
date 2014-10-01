@@ -23,5 +23,8 @@ d3.timer (e) ->
   if counter is 1000
     counter = 1
   d3.selectAll("circle").attr "cy", (d, i) ->
-    (parseInt(d3.select(this).attr "cy") + Math.ceil 3*Math.random(0,1) + (d*d)%7)%400
+    presentValue = parseInt d3.select(this).attr("cy")
+    randomValue = 1 + Math.ceil 2*Math.random()
+    speedStep = (d*d)%7
+    ( presentValue + randomValue + speedStep)%400
   undefined
