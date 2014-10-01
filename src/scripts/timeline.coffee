@@ -17,6 +17,9 @@ events = timeline.selectAll("circle").data(dataPoints).enter().append("circle")
   .style "fill", (d, i) -> palette[i%6]
 
 counter = 0
+presentValue = 0
+randomValue = 0
+speedStep = 0
 
 d3.timer (e) ->
   counter += 1
