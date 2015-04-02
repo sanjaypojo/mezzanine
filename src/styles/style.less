@@ -26,11 +26,14 @@
 
 
 @v-rhythm: 1rem;
-@brand-black: #333;
-@brand-yellow: #eeee22;
+@brand-black: #000;
+@brand-gray: #2e332f;
+@brand-yellow: #fecb00;
+@brand-blue: #004358;
 
 body {
   // background-color: #fdfdfd;
+  color: @brand-gray;
 }
 
 .v-space(@margin, @padding) {
@@ -74,13 +77,15 @@ img {
   transition: all 0.5s ease;
   .project-info {
     .make-sm-column(6);
+    color: lighten(@brand-blue, 10%);
   }
   img {
     .make-sm-column(6);
     .img-thumbnail;
   }
-  &:hover {
+  &:hover, &:visited {
     transform: scale(1.1);
+    color: @brand-blue;
   }
 }
 
