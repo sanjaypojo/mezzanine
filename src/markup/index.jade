@@ -4,69 +4,42 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
     title Hello
     link(href="css/style.css", rel="stylesheet", type="text/css")
+    mixin section(title)
+      section.section
+        h2.section-title= title
+        .row
+          block
+    mixin project(title, link, imageLink, description)
+      .project
+        a(href=link target="_blank")
+          img(src=imageLink)
+          .project-info
+            h3= title
+            p= description
   body
     header.title
       h1 Sanjay Guruprasad
-    section.section#work
-      h2.section-title Work
-      .project
-        a(href="http://nocturnedevs.com" target="_blank")
-          img(src="img/nocturne.png")
-          .project-info
-            h3 Nocturne
-            p Open source projects with my best friend, Hari Mohanraj
-      .project
-        a(href="http://softrade.in" target="_blank")
-          img(src="img/softrade.png")
-          .project-info
-            h3 Softrade
-            p Customized software projects at my parent's company
-    section.section#projects
-      h2.section-title Projects
-      .project
-        a(href="http://thoughtarium.com" target="_blank")
-          img(src="img/thoughtarium.png")
-          .project-info
-            h3 Thoughtarium
-            p My blog written on a homegrown blogging engine using NodeJS
-      .project
-        a(href="http://beta.sunnysideup.co.in" target="_blank")
-          img(src="img/sunnySideUp.png")
-          .project-info
-            h3 Sunny Side Up
-            p A store for quirky products. Under construction!
-      .project
-        a(href="http://twidd.ly" target="_blank")
-          img(src="img/twiddly.png")
-          .project-info
-            h3 Twiddly
-            p Bringing the best content on the web to your android lockscreen!
-      .project
-        a(href="https://atom.io/packages/Watchmenesque-Dark" target="_blank")
-          img(src="img/watchmenesque.png")
-          .project-info
-            h3 Watchmenesque
-            p A syntax theme I created for the atom text editor. Crawling towards 200 downloads
-      .project
-        a(href="http://todo.sanjaypojo.com" target="_blank")
-          img(src="img/reactDo.png")
-          .project-info
-            h3 React.Do
-            p A basic todo app to try out ReactJS. It uses localStorage so your todos are saved in your browser
-      .project
-        a(href="http://shylock.sanjaypojo.com/app" target="_blank")
-          img(src="img/shylock.png")
-          .project-info
-            h3 Shylock
-            p Using machine learning to predict whether you sound more like Shakespeare or Sir Arthur Conan Doyle
-      .project
-        a(href="http://sanjaypojo.github.io/revolutions/" target="_blank")
-          img(src="img/revolutions.gif")
-          .project-info
-            h3 Revolutions
-            p A code doodle to visualize our solar system
-    section.section#timeline
-      h2.section-title Timeline
-      p.section-intro Coming soon...
+    main
+      +section("Projects")
+        +project("Thoughtarium", "http://thoughtarium.com", "img/thoughtarium.png",
+          "My blog written on a homegrown blogging engine using NodeJS")
+        +project("Sunny Side Up", "http://sunnysideup.co.in", "img/sunnySideUp.png",
+          "A store for quirky products. Under construction!")
+        +project("Twiddly", "http://twidd.ly", "img/twiddly.png",
+          "Bringing the best content on the web to your android lockscreen!")
+        +project("Watchmenesque", "https://atom.io/packages/Watchmenesque-Dark", "img/watchmenesque.png",
+          "A syntax theme I created for the atom text editor. Crawling towards 200 downloads")
+      +section("Work")
+        +project("Nocturne", "http://nocturnedevs.com", "img/nocturne.png",
+          "Open source projects with my best friend, Hari Mohanraj")
+        +project("Softrade", "http://softrade.in", "img/softrade.png",
+          "Customized software projects at my parent's company")
+      +section("Doodles")
+        +project("Revolutions", "http://sanjaypojo.github.io/revolutions/", "img/revolutions.gif",
+          "A code doodle to visualize our solar system")
+        +project("React.Do", "http://todo.sanjaypojo.com", "img/reactDo.png",
+          "A basic todo app to try out ReactJS. It uses localStorage so your todos are saved in your browser")
+        +project("Shylock", "http://shylock.sanjaypojo.com/app", "img/shylock.png",
+          "Using machine learning to predict whether you sound more like Shakespeare or Sir Arthur Conan Doyle")
     footer
       p Designed and developed by @sanjaypojo

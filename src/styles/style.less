@@ -55,32 +55,33 @@ img {
   .img-responsive;
 }
 
-.section {
-  .container;
+main {
   .clearfix;
-  .v-space(2, 2);
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 5%;
 }
 
-.section-title {
+.section {
   .make-xs-column(12);
-  .v-space(2, 2);
-}
-
-.section-intro {
-  .make-xs-column(12);
-  .v-space(2,2);
+  .clearfix;
+  .v-space(1, 2);
+  h2 { .v-space(1,2); }
 }
 
 .project {
-  .make-sm-column(6);
-  .v-space(2,2);
+  .make-xs-column(12);
+  .make-sm-column(4);
+  .v-space(2,4);
   transition: all 0.5s ease;
   .project-info {
-    .make-sm-column(6);
+    .make-xs-column(6);
+    .make-sm-column(12);
     color: lighten(@brand-blue, 10%);
   }
   img {
-    .make-sm-column(6);
+    .make-xs-column(6);
+    .make-sm-column(12);
     .img-thumbnail;
   }
   &:hover, &:visited {
