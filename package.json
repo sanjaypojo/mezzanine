@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/sanjaypojo/mezzanine",
   "dependencies": {
+    "bootstrap": "^3.3.5",
     "coffee-script": "^1.8.0",
     "connect": "^2.25.7",
     "morgan": "^1.6.1",
@@ -32,7 +33,5 @@
     "serve-static": "^1.10.0",
     "transpile": "git+ssh://git@github.com:Softrade/transpile.git"
   },
-  "devDependencies": {
-    "bootstrap": "^3.2.0"
-  }
+  "devDependencies": {}
 }
