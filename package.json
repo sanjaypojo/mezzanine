@@ -26,9 +26,11 @@
   "dependencies": {
     "coffee-script": "^1.8.0",
     "connect": "^2.25.7",
+    "morgan": "^1.6.1",
     "quip": "^0.1.2",
-    "s-parse-request": "git+ssh://git@git.softrade.in:sanjaypojo/s-parse-request.git",
-    "s-rendered": "git+ssh://git@git.softrade.in:sanjaypojo/s-rendered.git"
+    "s-core": "git+ssh://git@github.com:Softrade/s-core.git",
+    "serve-static": "^1.10.0",
+    "transpile": "git+ssh://git@github.com:Softrade/transpile.git"
   },
   "devDependencies": {
     "bootstrap": "^3.2.0"
