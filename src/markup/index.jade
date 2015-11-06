@@ -2,8 +2,9 @@ doctype
 html
   head
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
-    title Hello
+    title Sanjay | Home
     link(href="css/style.css", rel="stylesheet", type="text/css")
+    link(rel="shortcut icon" href="/img/mezzanine.ico")
     mixin section(title)
       section.section
         h2.section-title= title
@@ -21,31 +22,31 @@ html
       h1 Sanjay Guruprasad
     main
       +section("Projects")
-        +project("DiscoverSelf", "http://alpha.discoverself.com", "img/discoverSelf.png",
+        +project("DiscoverSelf", "http://alpha.discoverself.com", "/img/discoverSelf.png",
           "Helping large organisations build better teams")
-        +project("Rejoov", "http://rejoov.in", "img/rejoov.png",
+        +project("Rejoov", "http://rejoov.in", "/img/rejoov.png",
           "A store for cold pressed juices in Bangalore")
-        +project("Thoughtarium", "http://thoughtarium.com", "img/thoughtarium.png",
+        +project("Thoughtarium", "http://thoughtarium.com", "/img/thoughtarium.png",
           "My blog written on a homegrown blogging engine using NodeJS")
-        +project("Sunny Side Up", "http://sunnysideup.co.in", "img/sunnySideUp.png",
+        +project("Sunny Side Up", "http://sunnysideup.co.in", "/img/sunnySideUp.png",
           "A store for quirky products")
-        +project("Twiddly", "http://twidd.ly", "img/twiddly.png",
+        +project("Twiddly", "http://twidd.ly", "/img/twiddly.png",
           "Bringing the best content on the web to your android lockscreen!")
-        +project("Watchmenesque", "https://atom.io/packages/Watchmenesque-Dark", "img/watchmenesque.png",
+        +project("Watchmenesque", "https://atom.io/packages/Watchmenesque-Dark", "/img/watchmenesque.png",
           "A syntax theme I created for the atom text editor. Crawling towards 400 downloads")
       +section("Work")
-        +project("Softrade", "http://softrade.in", "img/softrade.png",
+        +project("Softrade", "http://softrade.in", "/img/softrade.png",
           "Customized software projects at my parent's company")
-        +project("Twiddly", "http://twidd.ly", "img/twiddly.png",
+        +project("Twiddly", "http://twidd.ly", "/img/twiddly.png",
           "An attempt to startup. Part of the MIT startup labs cohort, 2014")
-        +project("Nocturne", "http://nocturnedevs.com", "img/nocturne.png",
+        +project("Nocturne", "http://nocturnedevs.com", "/img/nocturne.png",
           "Open source projects with my best friend, Hari Mohanraj")
       +section("Doodles")
-        +project("Revolutions", "http://sanjaypojo.github.io/revolutions/", "img/revolutions.gif",
+        +project("Revolutions", "http://sanjaypojo.github.io/revolutions/", "/img/revolutions.gif",
           "A code doodle to visualize our solar system")
-        +project("React.Do", "http://todo.sanjaypojo.com", "img/reactDo.png",
+        +project("React.Do", "http://todo.sanjaypojo.com", "/img/reactDo.png",
           "A basic todo app to try out ReactJS. It uses localStorage so your todos are saved in your browser")
-        +project("Shylock", "http://shylock.sanjaypojo.com/app", "img/shylock.png",
+        +project("Shylock", "http://shylock.sanjaypojo.com/app", "/img/shylock.png",
           "Using machine learning to predict whether you sound more like Shakespeare or Sir Arthur Conan Doyle")
     footer
       p Developed by @sanjaypojo
