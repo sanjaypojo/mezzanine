@@ -16,8 +16,17 @@ page =
 
 transpile.publicPath = "#{__dirname}/public/"
 transpile.less "#{__dirname}/styles/style.less"
-transpile.coffee "#{__dirname}/scripts/*.coffee"
+transpile.cjsx "#{__dirname}/scripts/*.cjsx"
 transpile.jade "#{__dirname}/markup/index.jade", {fileName: page.home.path}
+
+transpile.watch "#{__dirname}/markup/index.jade", {}, (glob, path) ->
+  transpile.jade glob, {fileName: page.home.path}
+
+transpile.watch "#{__dirname}/scripts/*.cjsx", {}, (glob, path) ->
+  transpile.cjsx path, {fileName: page.home.path}
+
+transpile.watch "#{__dirname}/styles/*.less", {}, (glob, path) ->
+  transpile.less "#{__dirname}/styles/style.less", {fileName: page.home.path}
 
 serveFile = (res, pageName) ->
   if page[pageName]?.path
