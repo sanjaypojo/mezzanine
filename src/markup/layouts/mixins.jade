@@ -16,3 +16,10 @@ mixin project(title, imageLink, caption, link, detailPage)
       .project-info
         h3= title
         p= caption
+
+mixin project-header(title, imageLink, caption)
+  .project-header
+    img(src=imageLink)
+    .heading-container
+      h1= title
+      h4= caption

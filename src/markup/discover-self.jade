@@ -1,8 +1,7 @@
 include layouts/head
 body
-  header.title
-    h1 DiscoverSelf
-    h3 Helping large organisations build better teams
+  include layouts/navbar
+  +project-header(title, thumbnail, caption)
   main
     section
       p.
