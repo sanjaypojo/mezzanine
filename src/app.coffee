@@ -6,41 +6,48 @@ morgan = require "morgan"
 s = require "s-core"
 transpile = require "transpile"
 pr = s.parseRequest
+render = s.rendered
+router = s.router
 
 app = connect()
 
-page =
-  home:
-    html: ""
-    path: "lkjansd7qwdAS"
+content = require "./content/content"
 
+render.jadePath = "#{__dirname}/markup/"
 transpile.publicPath = "#{__dirname}/public/"
 transpile.less "#{__dirname}/styles/style.less"
 transpile.cjsx "#{__dirname}/scripts/*.cjsx"
-transpile.jade "#{__dirname}/markup/index.jade", {fileName: page.home.path}
-
-transpile.watch "#{__dirname}/markup/index.jade", {}, (glob, path) ->
-  transpile.jade glob, {fileName: page.home.path}
 
 transpile.watch "#{__dirname}/scripts/*.cjsx", {}, (glob, path) ->
-  transpile.cjsx path, {fileName: page.home.path}
+  transpile.cjsx path
 
 transpile.watch "#{__dirname}/styles/*.less", {}, (glob, path) ->
-  transpile.less "#{__dirname}/styles/style.less", {fileName: page.home.path}
+  transpile.less "#{__dirname}/styles/style.less"
 
-serveFile = (res, pageName) ->
-  if page[pageName]?.path
-    if page[pageName]?.html?.length is 0
-      page[pageName].html = fs.readFileSync "#{__dirname}/public/html/#{page[pageName]?.path}.html"
-    res.ok page[pageName].html
-  else
-    res.notFound "Page Not Found!"
+controller =
+  home:
+    get: (req, res, next, urlData) ->
+      render.jade res, "index", {projects: content.projects, work: content.work}
+  projects:
+    get: (req, res, next, urlData) ->
+      if content.projects[urlData.projects.page]
+        render.jade(
+          res, urlData.projects.page,
+          content.projects[urlData.projects.page]
+        )
+      else
+        next()
 
 app
   .use morgan "dev"
   .use quip
   .use pr.url
   .use serveStatic "#{__dirname}/public/"
+  .use router "/projects/:page", controller.projects
+  .use router "/home", controller.home
   .use (req, res, next) ->
-    serveFile(res, "home")
+    if req.url is "/"
+      res.redirect "/home"
+    else
+      res.notFound "Page not found"
   .listen 3000

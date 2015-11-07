@@ -1,0 +1,18 @@
+mixin section(title)
+  section.section
+    h2.section-title= title
+    .row
+      block
+
+mixin project(title, imageLink, caption, link, detailPage)
+  if detailPage
+    - link = "/projects/" + detailPage;
+    - var target = "";
+  else
+    - var target = "_blank";
+  .project
+    a(href=link target=target)
+      img(src=imageLink)
+      .project-info
+        h3= title
+        p= caption
