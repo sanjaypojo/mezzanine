@@ -1,0 +1,48 @@
+include layouts/head
+body
+  include layouts/navbar
+  +project-header(title, thumbnail, caption)
+  main
+    section
+      .part
+        p.
+          For my undergraduate thesis at IIT Madras, I worked on Word Sense Disambiguation,
+          under the guidance of Prof. Balaraman Ravindran. In simple terms, the WSD problem
+          is about figuring out what is the meaning of a word in a given context.
+          For example, "I went to the bank to withdraw some money". Here we mean a financial bank,
+          and not a river bank. Can we get a computer to figure this out?
+        p.
+          One can try to solve this problem in many ways.
+          A purely probabilistic method would just be to check if a set of words
+          appear together in a sentence, what is the most likely sense of a word,
+          "given" the other words. We require a bunch of examples to figure out these probabilities
+          and we can then apply this to new situations.
+          Another method would be to compare all the meanings
+          of the set of words and see which combination of meanings are most in sync.
+          We could call this a "semantic" approach.
+          My research attempted to use both approaches together.
+      .part
+        h3 Abstract
+        .inline-image
+          img(src="/img/ensembleClassifierChart.png")
+        p.
+          Many words in the English languages are polysemous - they have more than one meaning. The meaning of such words depends on the context. When a polysemous word is present in a body of text, a particular sense of the word is activated based on the context. It is critical to understand which sense of a polysemous word is activated in a given context to derive meaning from a text containing polysemous words. Word Sense Disambiguation (WSD) is defined as the ability to computationally determine which sense of a word is activated by its use in a particular context. WSD has been a popular area of research and a number of supervised and unsupervised methods have been constructed to perform WSD. Supervised methods use Machine Learning techniques to perform WSD.
+        p.
+          In texts, words that are related semantically come together to collectively convey an idea. Lexical chaining is the process of identifying sets of semantically related words in a text. These sets of words, which we call lexical chains, provide a rich representation of the text and are used in a variety of Natural Language Processing tasks. When a lexical chain is constructed, it is based on the meaning of words in a text, thus lexical chaining algorithms intrinsically perform WSD during the construction of Lexical chains. Galley-McKeown’s lexical chaining algorithm, boasts good WSD performance compared to other Lexical Chaining algorithms.
+        p.
+          In this work, we construct an ensemble classifier, consisting of a supervised classifier (Naive Bayes Classifier) and Galley McKeown’s algorithm to enhance the performance of Galley-McKeown’s algortihm. We use the supervised classifier to shortlist the top three senses of each of the words in a text and then use Galley-McKeown’s algorithm on this reduced solution space. We show that the Galley-McKeown algorithm boasts of a 24.1% increase in accuracy in WSD performance when shortlisting is carried out by the Naive Bayes Classifier. Since WSD performance is one of the ways of measuring Lexical Chaining performance, the ensemble classifier can be used to construct better lexical chains.
+      .part
+        h3 Why did I end up working on this?
+        p.
+          As an Engineering Physics student, I could take up courses in the
+          CS department since it was one of the few flexible, interdisciplinary courses at IITM.
+          Soon, I became very interested in ML and NLP and my Professors were supportive
+          when I requested to do my research in the Computer Science department.
+          NLP was truly fascinating to me at this juncture,
+          as I was also pursuing a minor in English Literature.
+          The evolution of Natural Languages, with all their quirks and peculiarities,
+          is an interesting topic by itself. Trying to make a computer understand these languages?
+          Incredibly exciting!
+      
+  footer
+    p Developed by @sanjaypojo

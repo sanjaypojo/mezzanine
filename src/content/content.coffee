@@ -1,10 +1,21 @@
 exports.projects =
+  "thesis-nlp":
+    title: "Thesis - NLP"
+    detailPage: "thesis-nlp"
+    link: "/projects/thesis-nlp"
+    thumbnail: "/img/nlp.jpg"
+    caption: "WSD using supervised and unsupervised methods based on Lexical Chains"
   "discover-self":
     title: "DiscoverSelf"
     detailPage: "discover-self"
     link: "http://alpha.discoverself.com"
     thumbnail: "/img/discoverSelf.png"
     caption: "Helping large organisations build better teams"
+  twiddly:
+    title: "Twiddly"
+    link: "http://twidd.ly"
+    thumbnail: "/img/twiddly.png"
+    caption: "Bringing the best content on the web to your android lockscreen!"
   rejoov:
     title: "Rejoov"
     link: "http://rejoov.in"
@@ -19,12 +30,7 @@ exports.projects =
     title: "Sunny Side Up"
     link: "http://sunnysideup.co.in"
     thumbnail: "/img/sunnySideUp.png"
-    caption: "A store for quirky products"
-  twiddly:
-    title: "Twiddly"
-    link: "http://twidd.ly"
-    thumbnail: "/img/twiddly.png"
-    caption: "Bringing the best content on the web to your android lockscreen!"
+    caption: "A store for quirky notebooks and umbrellas"
   watchmenesque:
     title: "Watchmenesque"
     link: "https://atom.io/packages/Watchmenesque-Dark"
