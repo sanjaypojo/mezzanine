@@ -1,6 +1,6 @@
 exports.projects =
   "thesis-nlp":
-    title: "Thesis - NLP"
+    title: "Thesis: WSD"
     detailPage: "thesis-nlp"
     link: "/projects/thesis-nlp"
     thumbnail: "/img/nlp.jpg"
