@@ -17,9 +17,15 @@ mixin project(title, imageLink, caption, link, detailPage)
         h3= title
         p= caption
 
-mixin project-header(title, imageLink, caption)
+mixin project-header(title, imageLink, caption, links)
   .project-header
     img(src=imageLink)
     .heading-container
       h1= title
       h4= caption
+      .link-block
+        if links
+          for link in links
+            a(class="link", href="#{link.url}", target="_blank")
+              i(class="fa #{link.icon}")
+              span= link.caption
