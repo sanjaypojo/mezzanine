@@ -5,12 +5,26 @@ exports.projects =
     link: "/projects/thesis-nlp"
     thumbnail: "/img/nlp.jpg"
     caption: "WSD using supervised and unsupervised methods based on Lexical Chains"
+    links: [
+      {
+        caption: "View Thesis"
+        url: "/pdf/sanjay-wsd-thesis.pdf"
+        icon: "fa-file-pdf-o"
+      }
+    ]
   "discover-self":
     title: "DiscoverSelf"
     detailPage: "discover-self"
     link: "http://alpha.discoverself.com"
     thumbnail: "/img/discoverSelf.png"
     caption: "Helping large organisations build better teams"
+    links: [
+      {
+        caption: "Website"
+        url: "https://alpha.discoverself.com"
+        icon: "fa-newspaper-o"
+      }
+    ]
   twiddly:
     title: "Twiddly"
     link: "http://twidd.ly"

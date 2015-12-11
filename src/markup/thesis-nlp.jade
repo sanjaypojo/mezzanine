@@ -1,7 +1,7 @@
 include layouts/head
 body
   include layouts/navbar
-  +project-header(title, thumbnail, caption)
+  +project-header(title, thumbnail, caption, links)
   main
     section
       .part
@@ -28,9 +28,9 @@ body
         p.
           Many words in the English languages are polysemous - they have more than one meaning. The meaning of such words depends on the context. When a polysemous word is present in a body of text, a particular sense of the word is activated based on the context. It is critical to understand which sense of a polysemous word is activated in a given context to derive meaning from a text containing polysemous words. Word Sense Disambiguation (WSD) is defined as the ability to computationally determine which sense of a word is activated by its use in a particular context. WSD has been a popular area of research and a number of supervised and unsupervised methods have been constructed to perform WSD. Supervised methods use Machine Learning techniques to perform WSD.
         p.
-          In texts, words that are related semantically come together to collectively convey an idea. Lexical chaining is the process of identifying sets of semantically related words in a text. These sets of words, which we call lexical chains, provide a rich representation of the text and are used in a variety of Natural Language Processing tasks. When a lexical chain is constructed, it is based on the meaning of words in a text, thus lexical chaining algorithms intrinsically perform WSD during the construction of Lexical chains. Galley-McKeown’s lexical chaining algorithm, boasts good WSD performance compared to other Lexical Chaining algorithms.
+          In texts, words that are related semantically come together to collectively convey an idea. Lexical chaining is the process of identifying sets of semantically related words in a text. These sets of words, which we call lexical chains, provide a rich representation of the text and are used in a variety of Natural Language Processing tasks. When a lexical chain is constructed, it is based on the meaning of words in a text, thus lexical chaining algorithms intrinsically perform WSD during the construction of Lexical chains. Galley-McKeown's lexical chaining algorithm, boasts good WSD performance compared to other Lexical Chaining algorithms.
         p.
-          In this work, we construct an ensemble classifier, consisting of a supervised classifier (Naive Bayes Classifier) and Galley McKeown’s algorithm to enhance the performance of Galley-McKeown’s algortihm. We use the supervised classifier to shortlist the top three senses of each of the words in a text and then use Galley-McKeown’s algorithm on this reduced solution space. We show that the Galley-McKeown algorithm boasts of a 24.1% increase in accuracy in WSD performance when shortlisting is carried out by the Naive Bayes Classifier. Since WSD performance is one of the ways of measuring Lexical Chaining performance, the ensemble classifier can be used to construct better lexical chains.
+          In this work, we construct an ensemble classifier, consisting of a supervised classifier (Naive Bayes Classifier) and Galley McKeown's algorithm to enhance the performance of Galley-McKeown's algortihm. We use the supervised classifier to shortlist the top three senses of each of the words in a text and then use Galley-McKeown's algorithm on this reduced solution space. We show that the Galley-McKeown algorithm boasts of a 24.1% increase in accuracy in WSD performance when shortlisting is carried out by the Naive Bayes Classifier. Since WSD performance is one of the ways of measuring Lexical Chaining performance, the ensemble classifier can be used to construct better lexical chains.
       .part
         h3 Why did I end up working on this?
         p.
