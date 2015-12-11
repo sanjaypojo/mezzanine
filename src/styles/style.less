@@ -34,6 +34,7 @@ html {
 body {
   .clearfix;
   color: @brand-gray;
+  padding-bottom: 4rem;
   margin-bottom: @footer-height;
 }
 
@@ -83,7 +84,6 @@ i {
 nav {
   .make-xs-column(12);
   background-color: @brand-black;
-  background-color: @brand-black;
   color: @brand-yellow;
 }
 
@@ -125,11 +125,12 @@ main {
 .project-header {
   .clearfix;
   .make-xs-column(12);
-  .v-space(2,3);
+  .v-space(3,3);
   padding-top: 3rem;
-  background-color: fade(@brand-yellow, 20%);
+  background-color: @brand-yellow;
+  background-image: url("/img/fabric-tile-2.png");
+  background-repeat: repeat;
   .text-center;
-  border-bottom: 1px solid fade(@brand-gray, 20%);
   img {
     border-radius: 100%;
     height: 15rem;
