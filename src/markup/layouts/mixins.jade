@@ -15,11 +15,12 @@ mixin project(title, imageLink, caption, link, detailPage)
       img(src=imageLink)
       .project-info
         h3= title
-        p= caption
+        p.caption= caption
 
 mixin project-header(title, imageLink, caption, links)
   .project-header
-    img(src=imageLink)
+    if imageLink
+      img(src=imageLink)
     .heading-container
       h1= title
       h4= caption

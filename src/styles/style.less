@@ -1,6 +1,7 @@
 // Core variables and mixins
 @import "../../node_modules/bootstrap/less/variables.less";
 @import "../../node_modules/bootstrap/less/mixins.less";
+@import "../../node_modules/bootstrap/less/responsive-utilities.less";
 
 // Reset and dependencies
 @import "../../node_modules/bootstrap/less/normalize.less";
@@ -104,12 +105,18 @@ main {
 .project {
   .make-xs-column(12);
   .make-sm-column(4);
-  .v-space(2,4);
+  .v-space(0,0);
   transition: all 0.5s ease;
   .project-info {
     .make-xs-column(6);
     .make-sm-column(12);
+    min-height: 20rem;
     color: lighten(@brand-blue, 10%);
+    p.caption {
+      @media(max-width: @screen-xs-max) {
+        font-size: 1rem;
+      }
+    }
   }
   img {
     .make-xs-column(6);
@@ -117,7 +124,7 @@ main {
     .img-thumbnail;
   }
   &:hover, &:visited {
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: @brand-blue;
   }
 }
@@ -169,5 +176,5 @@ footer {
   width: 100%;
   padding: 1rem 1rem;
   height: @footer-height;
-  .text-right;
+  .text-center;
 }
