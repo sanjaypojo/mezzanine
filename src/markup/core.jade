@@ -1,0 +1,24 @@
+include layouts/head
+body
+  include layouts/navbar
+  +project-header(title, thumbnail, caption, links)
+  main
+    section.text-section
+      p.
+        Built out Softrade's core libraries, exposing a succinct API
+        consumed across all our projects. The library is composed of a number
+        of modular npm packages, each with automated tests - a battery of critical
+        and frequently used server side functions and classes.
+      p.
+        This includes a database adaptor, a session handler, CSV upload parser,
+        request parsing NodeJS middleware, a custom URL router, a tracker to post
+        items to our Slack channel, a RESTful api middleware, PDF piping middleware etc.
+      p.
+        Apart from this, I wrote a collection of shell scripts, wrapping around
+        git commands and automating common development tasks to prevent errors.
+        I wrote a simple script to enable heroku like deployments using a simple
+        git push. I have also written a number of build, deployment and backup
+        automation scripts.
+        
+  footer
+    p Developed by @sanjaypojo

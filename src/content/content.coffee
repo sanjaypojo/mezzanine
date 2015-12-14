@@ -68,7 +68,18 @@ exports.projects =
     thumbnail: "/img/shylock.png"
     caption: "Using machine learning to predict whether
       you sound more like Shakespeare or Sir Arthur Conan Doyle"
-
+  dotmatrix:
+    title: "Dotmatrix"
+    link: "http://dotmatrix.herokuapp.com/"
+    thumbnail: "/img/dotmatrix.jpg"
+    caption: "Using the geolocation API to do a feasibility study
+      for a trucker tracking project"
+  core:
+    title: "Core"
+    link: "/projects/core"
+    thumbnail: "/img/core.jpg"
+    caption: "A collection of Softrade's core libraries, forming the
+      foundation of all our web projects."
 
 exports.work =
   softrade:
