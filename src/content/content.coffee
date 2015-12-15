@@ -2,7 +2,6 @@ exports.projects =
   "thesis-nlp":
     title: "Thesis: WSD"
     detailPage: "thesis-nlp"
-    link: "/projects/thesis-nlp"
     thumbnail: "/img/nlp.jpg"
     caption: "WSD using supervised and unsupervised methods based on Lexical Chains"
     links: [
@@ -15,7 +14,6 @@ exports.projects =
   "discover-self":
     title: "DiscoverSelf"
     detailPage: "discover-self"
-    link: "http://alpha.discoverself.com"
     thumbnail: "/img/discoverSelf.png"
     caption: "Helping large organisations build better teams using data"
     links: [
@@ -30,21 +28,29 @@ exports.projects =
     link: "http://twidd.ly"
     thumbnail: "/img/twiddly.png"
     caption: "Bringing the best content on the web to your android lockscreen!"
-  rejoov:
-    title: "Rejoov"
-    link: "http://rejoov.in"
-    thumbnail: "/img/rejoov.png"
-    caption: "A store for cold pressed juices in Bangalore"
+  magnetworks:
+    title: "MagnetWorks"
+    detailPage: "magnetworks"
+    thumbnail: "/img/magnetworks.jpg"
+    caption: "Wireless and data driven factories with real-time
+      data processing and alerts on the cloud"
+  shylock:
+    title: "Shylock"
+    link: "http://shylock.sanjaypojo.com/app"
+    thumbnail: "/img/shylock.png"
+    caption: "Using machine learning to predict whether
+      you sound more like Shakespeare or Sir Arthur Conan Doyle"
+  core:
+    title: "Core"
+    detailPage: "core"
+    thumbnail: "/img/core.jpg"
+    caption: "A collection of Softrade's core libraries, forming the
+      foundation of all our web projects."
   thoughtarium:
     title: "Thoughtarium"
     link: "http://thoughtarium.com"
     thumbnail: "/img/thoughtarium.png"
     caption: "My blog written on a homegrown blogging engine using NodeJS"
-  "sunny-side-up":
-    title: "Sunny Side Up"
-    link: "http://sunnysideup.co.in"
-    thumbnail: "/img/sunnySideUp.png"
-    caption: "A store for quirky notebooks and umbrellas"
   watchmenesque:
     title: "Watchmenesque"
     link: "https://atom.io/packages/Watchmenesque-Dark"
@@ -56,30 +62,28 @@ exports.projects =
     link: "http://sanjaypojo.github.io/revolutions/"
     thumbnail: "/img/revolutions.gif"
     caption: "A code doodle to visualize our solar system"
+  rejoov:
+    title: "Rejoov"
+    link: "http://rejoov.in"
+    thumbnail: "/img/rejoov.png"
+    caption: "A store for cold pressed juices in Bangalore"
   "react-do":
     title: "React.Do"
     link: "http://todo.sanjaypojo.com"
     thumbnail: "/img/reactDo.png"
     caption: "A basic todo app to try out ReactJS.
       It uses localStorage so your todos are saved in your browser"
-  shylock:
-    title: "Shylock"
-    link: "http://shylock.sanjaypojo.com/app"
-    thumbnail: "/img/shylock.png"
-    caption: "Using machine learning to predict whether
-      you sound more like Shakespeare or Sir Arthur Conan Doyle"
+  "sunny-side-up":
+    title: "Sunny Side Up"
+    link: "http://sunnysideup.co.in"
+    thumbnail: "/img/sunnySideUp.png"
+    caption: "A store for quirky notebooks and umbrellas"
   dotmatrix:
     title: "Dotmatrix"
     link: "http://dotmatrix.herokuapp.com/"
     thumbnail: "/img/dotmatrix.jpg"
     caption: "Using the geolocation API to do a feasibility study
       for a trucker tracking project"
-  core:
-    title: "Core"
-    link: "/projects/core"
-    thumbnail: "/img/core.jpg"
-    caption: "A collection of Softrade's core libraries, forming the
-      foundation of all our web projects."
   nocturne:
     title: "Nocturne"
     link: "http://nocturnedevs.com"
@@ -88,11 +92,93 @@ exports.projects =
 
 exports.timeline = [
   {
+    title: "CTO, Softrade"
+    description: "Leading Softrade's core team in the development of
+      web based systems and products. Architecting systems,
+      managing the entire product lifecycle - design, development and
+      deployment. Handling recruitment and training."
+    time: "2014 - Present"
+  }
+  {
+    title: "MIT Global Startup Labs"
+    description: "Twiddly is 1 of 12 startups incubated at the MIT Global
+      Startup Labs accelerator in Bangalore. Goes on to win an offer
+      of incubation from Kyron on demo day."
+    time: "2014"
+  }
+  {
+    title: "Co-founder and CTO, Twiddly"
+    description: "Founded Twiddly, aiming to bring the best content on the
+      web to your lockscreen. Coded across the stack scraping sources and
+      scouring APIs to generate immersive fullscreen stories.
+      Built a NodeJS / PostgreSQL API layer, a Chrome plugin for curating
+      content, a web based dashboard and an Android lockscreen app."
+    time: "2014"
+  }
+  {
+    title: "Full Stack Engineer, MagnetWorks"
+    description: "Part of a 5 member IoT startup.
+      We built “redboxes” that plugged into sensors on the factory floor,
+      to make them wireless, create a mesh network and push real-time data
+      across the factory to an aggregator and then to the cloud. Engineers
+      could then monitor the data, setup custom computed/aggregated variables
+      and then configure alerts on these to receive SMSes and dashboard alerts."
+    time: "2013"
+  }
+  {
+    title: "Analyst, Global Markets, Deutsche Bank"
+    description: "Worked on the Commodities APAC desk for 15 months.
+      Worked on structuring and pricing of derivatives as well as
+      marketing the entire commodities product suite to clients.
+      Conceptualized and developed pricing tools, trade tracking tools
+      and workflows which formed the backbone of our daily flow business."
+    time: "2012-13"
+  }
+  {
     title: "Dr. Shankar Dayal Sharma Prize"
     description: "Graduated with the Dr. Shankar Dayal Sharma Prize, for
       'Best All Round performance in Curricular and Extracurricular activities',
       awarded to a single student in the entire graduating batch at IIT Madras."
     time: "2012"
+  }
+  {
+    title: "Institute Blues"
+    description: "Awarded the coveted Institute Blues (Bronze), presented to a
+      select group of students through IIT-M history for All Round achievement."
+    time: "2012"
+  }
+  {
+    title: "Dileep Veeraraghavan Memorial Award"
+    description: "Received the award for best cumulative performance in
+      Humanities courses. Also received an Institute award for best overall
+      performance in a Humanities minor."
+    time: "2012"
+  }
+  {
+    title: "Runners up (International), Bank of America Campus Challenge"
+    description: "Won $ 32,000 as part of 8 member team competing with teams
+      world over (CMU, Georgia Tech, NUS, UC Cork & IITM).
+      Designed the technical architecture and business models for an
+      end-to-end payment system of the future."
+    time: "2012"
+  }
+  {
+    title: "Summer Intern, Schlumberger"
+    description: "Designed a qualitative model to 'frack' exploration oil wells
+      in Gujarat, India. The exploration well was subsequently fracked leading
+      to a five-fold increase in production. Received a pre-placement
+      job offer for exemplary work during the internship."
+    time: "2011"
+  }
+  {
+    title: "Cultural Events, IITM"
+    description: "Held a number of positions at IITM - Elected Literary
+      Secretary of the hostel (2010-11), Headed Thespian club (2010-11),
+      Head of cultural events 2011-12 (Events Core, Saarang) etc.
+      Acted in a number of plays, sang in a band,
+      made short films, wrote, lead the hostel to an
+      unprecedented 4 year winning streak in the 'Lit-Soc' championship."
+    time: "2008"
   }
   {
     title: "IIT Madras"
