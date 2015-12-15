@@ -3,12 +3,13 @@ body
   header.title
     h1 Sanjay Guruprasad
   main
+    +section("Intro")
+      p.intro-text.
+        Entrepreneur and full stack developer, currently interested in NLP and recommender systems.
+        Envision a future with context at the centre. A more semantic internet
+        and a data driven world.
     +section("Projects")
       for project in projects
         +project(project.title, project.thumbnail,
           project.caption, project.link, project.detailPage)
-    +section("Work")
-      for company in work
-        +project(company.title, company.thumbnail,
-          company.caption, company.link, company.detailPage)
   include layouts/footer

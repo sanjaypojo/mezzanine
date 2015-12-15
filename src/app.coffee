@@ -27,7 +27,7 @@ transpile.watch "#{__dirname}/styles/*.less", {}, (glob, path) ->
 controller =
   home:
     get: (req, res, next, urlData) ->
-      render.jade res, "index", {projects: content.projects, work: content.work}
+      render.jade res, "index", {projects: content.projects}
   projects:
     get: (req, res, next, urlData) ->
       if content.projects[urlData.projects.page]
@@ -43,7 +43,7 @@ app
   .use quip
   .use pr.url
   .use serveStatic "#{__dirname}/public/"
-  .use router "/projects/:page", controller.projects
+  .use router "/projects/:page", controller.projects, true
   .use router "/home", controller.home
   .use (req, res, next) ->
     if req.url is "/"

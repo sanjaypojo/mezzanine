@@ -17,7 +17,7 @@ exports.projects =
     detailPage: "discover-self"
     link: "http://alpha.discoverself.com"
     thumbnail: "/img/discoverSelf.png"
-    caption: "Helping large organisations build better teams"
+    caption: "Helping large organisations build better teams using data"
     links: [
       {
         caption: "Website"
@@ -80,18 +80,6 @@ exports.projects =
     thumbnail: "/img/core.jpg"
     caption: "A collection of Softrade's core libraries, forming the
       foundation of all our web projects."
-
-exports.work =
-  softrade:
-    title: "Softrade"
-    link: "http://softrade.in"
-    thumbnail: "/img/softrade.png"
-    caption: "Customized software projects at my parent's company"
-  twiddly:
-    title: "Twiddly"
-    link: "http://twidd.ly"
-    thumbnail: "/img/twiddly.png"
-    caption: "An attempt to startup. Part of the MIT startup labs cohort: 2014"
   nocturne:
     title: "Nocturne"
     link: "http://nocturnedevs.com"
