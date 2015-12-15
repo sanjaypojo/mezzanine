@@ -149,9 +149,9 @@ exports.timeline = [
   }
   {
     title: "Dileep Veeraraghavan Memorial Award"
-    description: "Received the award for best cumulative performance in
-      Humanities courses. Also received an Institute award for best overall
-      performance in a Humanities minor."
+    description: "Received the award for best overall
+      performance in a Humanities minor. Received another Institute award for
+      best cumulative performance in Humanities courses."
     time: "2012"
   }
   {

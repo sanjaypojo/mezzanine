@@ -50,7 +50,7 @@ app
   .use router "/home", controller.home
   .use router "/timeline", controller.timeline
   .use (req, res, next) ->
-    if req.url is "/"
+    if req.url is "/" || req.url is "/media-lab-portfolio"
       res.redirect "/home"
     else
       res.notFound "Page not found"
