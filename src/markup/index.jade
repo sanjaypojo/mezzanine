@@ -8,6 +8,13 @@ body
         Entrepreneur and full stack developer, currently interested in NLP and recommender systems.
         Envision a future with context at the centre. A more semantic internet
         and a data driven world.
+      .intro-links
+        a.link-btn-plain(href="/timeline")
+          i.fa.fa-bicycle
+          | Timeline
+        a.link-btn-plain(target="_blank", href="https://in.linkedin.com/in/sanjaypojo")
+          i.fa.fa-linkedin-square
+          | LinkedIn
     +section("Projects")
       for project in projects
         +project(project.title, project.thumbnail,

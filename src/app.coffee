@@ -28,6 +28,9 @@ controller =
   home:
     get: (req, res, next, urlData) ->
       render.jade res, "index", {projects: content.projects}
+  timeline:
+    get: (req, res, next, urlData) ->
+      render.jade res, "timeline", {events: content.timeline}
   projects:
     get: (req, res, next, urlData) ->
       if content.projects[urlData.projects.page]
@@ -45,6 +48,7 @@ app
   .use serveStatic "#{__dirname}/public/"
   .use router "/projects/:page", controller.projects, true
   .use router "/home", controller.home
+  .use router "/timeline", controller.timeline
   .use (req, res, next) ->
     if req.url is "/"
       res.redirect "/home"

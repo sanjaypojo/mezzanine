@@ -116,6 +116,21 @@ main {
   font-size: 1.8rem;
 }
 
+.intro-links {
+  .make-xs-column(12);
+  .make-sm-column(6);
+  .make-sm-column-offset(3);
+  .clearfix;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid fade(@brand-gray, 10%);
+  border-bottom: 1px solid fade(@brand-gray, 10%);
+  .text-center;
+}
+
 .project {
   .make-xs-column(12);
   .make-sm-column(4);
@@ -165,18 +180,64 @@ main {
     height: 15rem;
     vertical-align: middle;
     .text-left;
-    .link-block {
-      .link {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
-        -moz-box-shadow: 2px 2px 1px 1px fade(@brand-gray, 60%);
-        -webkit-box-shadow: 2px 2px 1px 1px fade(@brand-gray, 60%);
-        box-shadow: 2px 2px 1px 1px fade(@brand-gray, 60%);
-        background-color: @brand-gray;
-        color: @brand-yellow;
-      }
+  }
+}
+
+.link-btn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  -moz-box-shadow: 2px 2px 1px 1px fade(@brand-gray, 60%);
+  -webkit-box-shadow: 2px 2px 1px 1px fade(@brand-gray, 60%);
+  box-shadow: 2px 2px 1px 1px fade(@brand-gray, 60%);
+  background-color: @brand-gray;
+  color: @brand-yellow;
+}
+
+.link-btn-plain {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: @brand-gray;
+  color: @brand-yellow;
+  &:hover {
+    background-color: @brand-black;
+    color: @brand-yellow;
+    border-bottom: 2px @brand-yellow solid;
+  }
+}
+
+.timeline {
+  border-left: solid 5px @brand-gray;
+  .timeline-event {
+    position: relative;
+    background-color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-left: 20px;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    -moz-box-shadow: 2px 2px 2px 2px fade(@brand-gray, 25%);
+    -webkit-box-shadow: 2px 2px 2px 2px fade(@brand-gray, 25%);
+    box-shadow: 2px 2px 2px 2px fade(@brand-gray, 25%);
+    .timeline-time {
+      font-size: 0.8rem;
+      position: absolute;
+      left: -25px;
+      width: 25px;
+      .text-center;
+      top: 1.5rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      background-color: @brand-gray;
+      color: @brand-yellow;
     }
   }
 }

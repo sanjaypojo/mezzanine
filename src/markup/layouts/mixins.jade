@@ -27,6 +27,15 @@ mixin project-header(title, imageLink, caption, links)
       .link-block
         if links
           for link in links
-            a(class="link", href="#{link.url}", target="_blank")
+            a(class="link-btn", href="#{link.url}", target="_blank")
               i(class="fa #{link.icon}")
               span= link.caption
+
+mixin timeline(events)
+  section.section
+    .timeline
+      for event in events
+        .timeline-event
+          .timeline-time= event.time
+          h4.timeline-title= event.title
+          p.timeline-description= event.description

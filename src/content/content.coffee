@@ -85,3 +85,41 @@ exports.projects =
     link: "http://nocturnedevs.com"
     thumbnail: "/img/nocturne.png"
     caption: "Open source projects with my best friend: Hari Mohanraj"
+
+exports.timeline = [
+  {
+    title: "Dr. Shankar Dayal Sharma Prize"
+    description: "Graduated with the Dr. Shankar Dayal Sharma Prize, for
+      'Best All Round performance in Curricular and Extracurricular activities',
+      awarded to a single student in the entire graduating batch at IIT Madras."
+    time: "2012"
+  }
+  {
+    title: "IIT Madras"
+    description: "Joined the B.Tech. programme in Engineering Physics at
+      the Indian Institute of Technology, Madras"
+    time: "2008"
+  }
+  {
+    title: "IIT-JEE"
+    description: "Cleared the IIT Joint entrance exam, finishing in
+      the top 0.02% out of 500,000+ students across India, giving me the
+      opportunity to pursue a B.Tech. at one of the prestigious Indian
+      Institutes of Technology."
+    time: "2008"
+  }
+  {
+    title: "KVPY Fellowship"
+    description: "Kishore Vaigyanik Protsahan Yojana (KVPY) is a Government of
+      India science fellowship given to only 100 candidates across India,
+      constituting the top 0.5% of the eligible candidates. Selected through
+      a written examination and a rigorous round of interviews by a panel of experts."
+    time: "2007"
+  }
+  {
+    title: "Existence"
+    description: "Born to two first generation entrepreneurs in the (then)
+      sleepy city of Bangalore"
+    time: "1990"
+  }
+]
