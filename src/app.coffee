@@ -62,7 +62,7 @@ app
   .use pr.url
   .use serveStatic "#{__dirname}/public/"
   .use (req, res, next) ->
-    incomingIP = req?.ip || req?._remoteAddress || req?.connection?.remoteAddress
+    incomingIP = req?.headers?["x-forwarded-for"] || req?.connection?.remoteAddress || req?.socket?.remoteAddress || req?.connection?.socket?.remoteAddress
     validIP = ///
       ^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)
       \.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)
