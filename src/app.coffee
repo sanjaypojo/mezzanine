@@ -70,7 +70,7 @@ app
       \.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)
       \.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
     ///
-    if validIP.test(incomingIP) && incomingUrl.indexOf "uptime" < 0
+    if validIP.test(incomingIP) && incomingUrl.indexOf("uptime") is -1
       reqwest.get "http://ipinfo.io/#{incomingIP}/json", (err, response, body) ->
         if !err
           data = JSON.parse body
