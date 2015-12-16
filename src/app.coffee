@@ -63,14 +63,14 @@ app
   .use serveStatic "#{__dirname}/public/"
   .use (req, res, next) ->
     incomingIP = req?.headers?["x-forwarded-for"] || req?.connection?.remoteAddress || req?.socket?.remoteAddress || req?.connection?.socket?.remoteAddress
+    incomingUrl = "#{req?.headers?.host}#{req.url}"
     validIP = ///
       ^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)
       \.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)
       \.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)
       \.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
     ///
-    if validIP.test(incomingIP)
-      incomingUrl = "#{req?.headers?.host}#{req.url}"
+    if validIP.test(incomingIP) && incomingUrl.indexOf "uptime" < 0
       reqwest.get "http://ipinfo.io/#{incomingIP}/json", (err, response, body) ->
         if !err
           data = JSON.parse body
