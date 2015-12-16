@@ -29,6 +29,7 @@
     "connect": "^2.25.7",
     "morgan": "^1.6.1",
     "quip": "^0.1.2",
+    "request": "^2.67.0",
     "s-core": "git+ssh://git@github.com:Softrade/s-core.git",
     "serve-static": "^1.10.0",
     "transpile": "git+ssh://git@github.com:Softrade/transpile.git"
