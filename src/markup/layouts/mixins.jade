@@ -39,3 +39,9 @@ mixin timeline(events)
           .timeline-time= event.time
           h4.timeline-title= event.title
           p.timeline-description= event.description
+
+mixin storyImage(imageName, caption)
+  .story-image-container
+    .story-image
+      img(src="/img/#{imageName}", alt="Image: #{imageName}")
+      .image-caption= caption

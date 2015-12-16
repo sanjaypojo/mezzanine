@@ -1,0 +1,18 @@
+include layouts/head
+body
+  include layouts/navbar
+  +project-header(title, thumbnail, caption, links)
+  main
+    section.text-section
+      .part
+        p.
+          I worked at MagnetWorks for 3 months. It was founded by two alumni from IIT Madras. MagnetWorks wanted to enter the industrial IoT space, with a vision to change the way factory control systems work. At MagnetWorks, we sought to make factories wireless and data-driven, with an eventual goal of predictive maintenance. I jumped at the opportunity to join the team of four. I built large parts of the data processing layer and also built an automated alerts system across the stack. We fabricated a "redbox" that would plug into industry standard sensors, make them wireless and transmit sensor data through a mesh network and to an aggregator.
+        p.
+          The aggregator would send this data to the cloud, where we processed it in real time. We built dashboards to visualize this data and an API layer to send out alerts. It was exhilarating when we first pumped some sensor data from across the street wirelessly and saw the data being plotted on our screens. Diving straight into an IoT startup taught me a lot about architecting systems across the stack.
+        +storyImage("redbox.jpg", "Our redbox was actually gray! Ingress protection and everything")
+        p.
+          Our technical architecture was quite interesting. The data processing layer was built first using Django. But then we were extremely excited by NodeJS and so, we decided to use a Node + backbone application for our dashboards and alerts system. We were doing a lot of the data processing using python libraries (numpy/scipy etc). Our aggregators were built by taking apart a generic router and installing OpenWRT, then smartly forwarding requests from the redboxes to the cloud.
+        +storyImage("redbox-testing.jpg", "When we said full stack, we meant it.")
+        p.
+          I had the opportunity to work with a great group of people and got the best possible introduction to a number of different technologies. Since the team was so strong technically, I had the opportunity to lean on them for guidance and learn at a rapid pace. Even though it was just three months, I learnt a LOT at MagnetWorks - the learning curve was steep and challenging. I left MagnetWorks, confident in my ability to pick up new technologies and programming languages at the drop of a hat, and with a belief that I can do pretty much anything with a computer if I put my mind to it.
+  include layouts/footer
