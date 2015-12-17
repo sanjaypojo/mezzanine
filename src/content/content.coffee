@@ -60,7 +60,7 @@ exports.projects =
   revolutions:
     title: "Revolutions"
     link: "http://sanjaypojo.github.io/revolutions/"
-    thumbnail: "/img/revolutions.gif"
+    thumbnail: "/img/revolutions.jpg"
     caption: "A code doodle to visualize our solar system"
   rejoov:
     title: "Rejoov"
