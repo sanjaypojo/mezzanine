@@ -27,9 +27,6 @@ transpile.watch "#{__dirname}/styles/*.less", {}, (glob, path) ->
   transpile.less "#{__dirname}/styles/style.less"
 
 controller =
-  home:
-    get: (req, res, next, urlData) ->
-      render.jade res, "index", {projects: content.projects}
   timeline:
     get: (req, res, next, urlData) ->
       render.jade res, "timeline", {events: content.timeline}
@@ -82,11 +79,13 @@ app
           )
     next()
   .use router "/projects/:page", controller.projects, true
-  .use router "/home", controller.home
   .use router "/timeline", controller.timeline
   .use (req, res, next) ->
-    if req.url is "/" || req.url is "/media-lab-portfolio"
-      res.redirect "/home"
+    # Custom routes
+    if req.url is "/"
+      render.jade res, "index", {projects: content.projects}
+    else if req.url is "/media-lab-portfolio"
+      res.redirect "/"
     else
-      res.notFound "Page not found"
+      render.jade res.notFound(), "404"
   .listen 3000
