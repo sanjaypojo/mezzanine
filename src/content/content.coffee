@@ -118,7 +118,7 @@ exports.timeline = [
   {
     title: "Full Stack Engineer, MagnetWorks"
     description: "Part of a 5 member IoT startup.
-      We built “redboxes” that plugged into sensors on the factory floor,
+      We built 'redboxes' that plugged into sensors on the factory floor,
       to make them wireless, create a mesh network and push real-time data
       across the factory to an aggregator and then to the cloud. Engineers
       could then monitor the data, setup custom computed/aggregated variables
@@ -172,12 +172,11 @@ exports.timeline = [
   }
   {
     title: "Cultural Events, IITM"
-    description: "Held a number of positions at IITM - Elected Literary
-      Secretary of the hostel (2010-11), Headed Thespian club (2010-11),
-      Head of cultural events 2011-12 (Events Core, Saarang) etc.
-      Acted in a number of plays, sang in a band,
-      made short films, wrote, lead the hostel to an
-      unprecedented 4 year winning streak in the 'Lit-Soc' championship."
+    description: "Organised and participated in a number of cultural events.
+      As Events Core for Saarang, I headed cultural events at IITM in 2011-12.
+      I served as Dramatics Coordinator in 2010-11 and Speaking Events
+      Coordinator in 2009-10. Won over 20 awards at the intra
+      and inter college levels"
     time: "2008"
   }
   {
@@ -189,7 +188,7 @@ exports.timeline = [
   {
     title: "IIT-JEE"
     description: "Cleared the IIT Joint entrance exam, finishing in
-      the top 0.02% out of 500,000+ students across India, giving me the
+      the top 0.4% out of 500,000+ students across India, giving me the
       opportunity to pursue a B.Tech. at one of the prestigious Indian
       Institutes of Technology."
     time: "2008"
