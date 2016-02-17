@@ -32,8 +32,7 @@ exports.projects =
     title: "MagnetWorks"
     detailPage: "magnetworks"
     thumbnail: "/img/magnetworks.jpg"
-    caption: "Wireless and data driven factories with real-time
-      data processing and alerts on the cloud"
+    caption: "Make factory control systems wireless and data-driven"
   shylock:
     title: "Shylock"
     link: "http://shylock.sanjaypojo.com/app"
