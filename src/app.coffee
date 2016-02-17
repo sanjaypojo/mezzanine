@@ -86,6 +86,8 @@ app
       render.jade res, "index", {projects: content.projects}
     else if req.url is "/media-lab-portfolio"
       res.redirect "/"
+    else if req.url is "/sitepoint"
+      res.redirect "/"
     else
       render.jade res.notFound(), "404"
   .listen 3000
