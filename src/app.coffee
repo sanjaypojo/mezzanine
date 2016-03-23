@@ -57,11 +57,14 @@ controller =
             apiError("Uploaded file could not be found")
           else
             imageFile = fs.readFileSync req?.file?.path
-            fs.writeFile "#{__dirname}/public/dubden/#{urlData.reykjavik.code}.png", imageFile, (err) ->
-              if err
-                apiError("Unable to write file to public: #{err}")
-              else
-                res.ok("Image upload successful")
+            fs.exists "#{__dirname}/public/dubden/", (dirExists) ->
+              if !dirExists
+                fs.mkdirSync "#{__dirname}/public/dubden/"
+              fs.writeFile "#{__dirname}/public/dubden/#{urlData.reykjavik.code}.png", imageFile, (err) ->
+                if err
+                  apiError("Unable to write file to public: #{err}")
+                else
+                  res.ok("Image upload successful")
       else
         res.forbidden("Incorrect password. Contact @sanjaypojo")
         return
