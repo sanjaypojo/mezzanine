@@ -45,19 +45,21 @@ controller =
       console.log req?.body?.password
       res.headers "Access-Control-Allow-Origin": "http://sanjaypojo.github.io"
 
-      apiError = () -> res.forbidden("Image upload failed. Contact @sanjaypojo")
+      apiError = (errorMessage) ->
+        console.log errorMessage
+        res.forbidden("Image upload failed. Contact @sanjaypojo")
 
       # Check image code and password
       if req?.body?.password is "hungryPanda" && urlData.reykjavik.code in ["carousel-1", "carousel-2", "carousel-3", "carousel-5", "carousel-5", "carousel-6"]
         # Read the temp file
         fs.exists req?.file?.path, (exists)->
           if !exists
-            apiError()
+            apiError("Uploaded file could not be found")
           else
             imageFile = fs.readFileSync req?.file?.path
             fs.writeFile "#{__dirname}/public/dubden/#{urlData.reykjavik.code}.png", imageFile, (err) ->
               if err
-                apiError()
+                apiError("Unable to write file to public")
               else
                 res.ok("Image upload successful")
       else
