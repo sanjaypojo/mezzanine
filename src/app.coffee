@@ -48,7 +48,7 @@ controller =
       apiError = () -> res.forbidden("Image upload failed. Contact @sanjaypojo")
 
       # Check image code and password
-      if req?.body?.password is "hungryPanda" && urlData.reykjavik.code in ["carousel-1", "carousel-2", "carousel-3", "carousel-5", "carousel-5"]
+      if req?.body?.password is "hungryPanda" && urlData.reykjavik.code in ["carousel-1", "carousel-2", "carousel-3", "carousel-5", "carousel-5", "carousel-6"]
         # Read the temp file
         fs.exists req?.file?.path, (exists)->
           if !exists
