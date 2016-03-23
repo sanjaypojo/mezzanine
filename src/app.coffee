@@ -43,7 +43,7 @@ controller =
     post: (req, res, next, urlData) ->
       console.log req?.file?.path
       console.log req?.body?.password
-      res.headers "Access-Control-Allow-Origin": "sanjaypojo.github.io"
+      res.headers "Access-Control-Allow-Origin": "http://sanjaypojo.github.io"
 
       apiError = () -> res.forbidden("Image upload failed. Contact @sanjaypojo")
 
