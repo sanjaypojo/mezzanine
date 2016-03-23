@@ -39,6 +39,31 @@ controller =
         )
       else
         next()
+  dubdenApi:
+    post: (req, res, next, urlData) ->
+      console.log req?.file?.path
+      console.log req?.body?.password
+      res.headers "Access-Control-Allow-Origin": "sanjaypojo.github.io"
+
+      apiError = () -> res.forbidden("Image upload failed. Contact @sanjaypojo")
+
+      # Check image code and password
+      if req?.body?.password is "hungryPanda" && urlData.reykjavik.code in ["carousel-1", "carousel-2", "carousel-3", "carousel-5", "carousel-5"]
+        # Read the temp file
+        fs.exists req?.file?.path, (exists)->
+          if !exists
+            apiError()
+          else
+            imageFile = fs.readFileSync req?.file?.path
+            fs.writeFile "#{__dirname}/public/dubden/#{urlData.reykjavik.code}.png", imageFile, (err) ->
+              if err
+                apiError()
+              else
+                res.ok("Image upload successful")
+      else
+        res.forbidden("Incorrect password. Contact @sanjaypojo")
+        return
+
 
 tracker = new Tracker(
   slack:
@@ -52,6 +77,9 @@ tracker = new Tracker(
   project:
     name: "mezzanine"
 )
+
+# Image uploads for dubden
+dubdenUpload = pr.upload({dest: "#{__dirname}/private/dubden/"})
 
 app
   .use morgan "dev"
@@ -78,6 +106,8 @@ app
             location: "#{data?.city}, #{data?.region}, #{data?.country}"
           )
     next()
+  .use "/api/dubden-uploads/reykjavik/", dubdenUpload.single("image")
+  .use router "/api/dubden-uploads/reykjavik/:code", controller.dubdenApi, true
   .use router "/projects/:page", controller.projects, true
   .use router "/timeline", controller.timeline
   .use (req, res, next) ->

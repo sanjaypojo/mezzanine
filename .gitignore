@@ -2,3 +2,5 @@ node_modules/
 src/public/css/
 src/public/js/
 src/public/html/
+src/public/dubden/
+src/private/dubden/
