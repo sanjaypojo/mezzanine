@@ -59,7 +59,7 @@ controller =
             imageFile = fs.readFileSync req?.file?.path
             fs.writeFile "#{__dirname}/public/dubden/#{urlData.reykjavik.code}.png", imageFile, (err) ->
               if err
-                apiError("Unable to write file to public")
+                apiError("Unable to write file to public: #{err}")
               else
                 res.ok("Image upload successful")
       else
