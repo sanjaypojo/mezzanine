@@ -145,6 +145,10 @@ nav {
   .make-xs-column(12);
   background-color: @brand-black;
   color: @brand-yellow;
+  text-decoration: none;
+  &:hover {
+    color: lighten(@brand-yellow, 10%);
+  }
 }
 
 main {
@@ -275,8 +279,28 @@ main {
   }
 }
 
+@keyframes event-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.stagger-animation(@counter) when (@counter > 0) {
+  @delay: 300 + (100 * (@counter - 1));
+  .timeline-event:nth-child(@{counter}) {
+    animation-name: event-appear;
+    animation-duration: ~"@{delay}ms";
+    animation-timing-function: cubic-bezier(1,0,0.8,0.4);
+  }
+  .stagger-animation(@counter - 1);
+}
+
 .timeline {
   border-left: solid 5px @brand-gray;
+  .stagger-animation(20);
   .timeline-event {
     position: relative;
     background-color: white;
